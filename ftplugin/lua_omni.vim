@@ -24,9 +24,9 @@ let b:did_lua_completions = 1
 " save and reset compatibility options
 let s:save_cpo = &cpo
 set cpo&vim
-                     
+
 " source Lua...
-luafile ~/.vim/ftplugin/lua_omni.lua
+exe "luafile " . expand("<sfile>:p:h") . "/lua_omni.lua"
 
 " options...
 set shiftwidth=2
